@@ -1,0 +1,21 @@
+
+0. library me humko functions ko internal banan pdathai.
+
+1. Tests ko likhte samay functions ka naam aisa rkho jisse samjh me a jaye asani se ki eroor kaha aur kya hai.
+
+
+2.  function testPriceFeedVersionisAccurate() public{
+      uint256 version = fundMe.getVersion();
+      assertEq(version,4);
+    }
+    -->>is function ko agar hune apne hi environment me use kiya to error dega isiiye humko koi ek forked testki zaroorrat hogi taaki humko live version mil sake
+    -->> ye anvil ka hi ek instance chalayega par jo url use krega vo alchemy ka use krega jisse mera code aaram se run ho jayega without any specific error.
+
+
+3. Hardcoding an address is enever a good practice
+  -->> so its better to code in remote env so we use "Mock Contract"
+  -->>it runs the same env of that network in our local environment
+  -->>if we want to have these contractss in out local anvil env we have to deploy those mock contracts and return their addresses to use them
+
+
+4.In contracts it is very difficult to check who deployed which contract 
