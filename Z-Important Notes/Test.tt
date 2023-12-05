@@ -2,13 +2,17 @@
 0. library me humko functions ko internal banan pdathai.
 
 1. Tests ko likhte samay functions ka naam aisa rkho jisse samjh me a jaye asani se ki eroor kaha aur kya hai.
+--> Unit: Testing a single function
+--> Integration: Testing multiple functions
+--> Forked: Testing on a forked network
+--> Staging: Testing on a live network (testnet or mainnet)
 
 
 2.  function testPriceFeedVersionisAccurate() public{
       uint256 version = fundMe.getVersion();
       assertEq(version,4);
     }
-    -->>is function ko agar hune apne hi environment me use kiya to error dega isiiye humko koi ek forked testki zaroorrat hogi taaki humko live version mil sake
+    -->> is function ko agar hune apne hi environment me use kiya to error dega isiiye humko koi ek forked testki zaroorrat hogi taaki humko live version mil sake
     -->> ye anvil ka hi ek instance chalayega par jo url use krega vo alchemy ka use krega jisse mera code aaram se run ho jayega without any specific error.
 
 
@@ -18,4 +22,7 @@
   -->>if we want to have these contractss in out local anvil env we have to deploy those mock contracts and return their addresses to use them
 
 
-4.In contracts it is very difficult to check who deployed which contract 
+4.In contracts it is very difficult to check who deployed which contract so we user makeAddr
+
+5.Storage Variables(Global) are stored in the system and take up space
+-->> while consatnt variables and variables which are declared in a function do ot take up space 

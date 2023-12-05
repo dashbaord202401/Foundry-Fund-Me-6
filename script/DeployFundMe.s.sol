@@ -2,7 +2,7 @@
 
 pragma solidity ^0.8.19;
 
- import {Script} from "node_modules/forge-std/Script.sol";
+ import {Script} from "forge-std/Script.sol";
  import {FundMe} from "../src/FundMe.sol";
  import {HelperConfig} from "./HelperConfig.s.sol";
  

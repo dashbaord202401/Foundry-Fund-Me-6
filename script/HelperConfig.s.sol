@@ -4,7 +4,7 @@
 //deploy mocks when we are in a local anvil chain
 //Keep track of contract address across different chains.
 
-import {Script} from "node_modules/forge-std/Script.sol";
+import {Script} from "forge-std/Script.sol";
 import {MockV3Aggregator} from "../test/mocks/MockV3Aggregator.sol";
 
 
